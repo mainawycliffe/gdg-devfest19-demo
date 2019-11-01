@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo-angular-elements-example';
+  errorMessage = '';
+
+  onError(message: string) {
+    this.errorMessage = message;
+  }
 }

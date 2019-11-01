@@ -12,6 +12,8 @@ import { tap } from 'rxjs/operators';
 export class ListTodosComponent implements OnInit {
   todos$: Observable<Todos> = null;
 
+  errorMessage = '';
+
   constructor(private todosService: TodosService) {}
 
   ngOnInit() {
