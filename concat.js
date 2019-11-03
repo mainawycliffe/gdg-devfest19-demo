@@ -2,7 +2,7 @@
 const fs = require('fs-extra');
 const concat = require('concat');
 
-const savePath = "./web";
+const savePath = "./doc";
 const buildDir = "./dist/todo-angular-elements-example";
 
 async function concatJS(version) {
