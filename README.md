@@ -62,3 +62,14 @@ And then, you can use the Web Components:
   ```html
   <list-todos></list-todos>
   ```
+
+  The `add-todo` component also produces an event, incase the todo text is empty. You can listen to that also:
+
+  ```js
+
+  const el = document.querySelector('add-todo');
+  el.addEventListener('onerror', (event) => {
+    alert(event.detail);
+  });
+
+  ```
