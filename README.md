@@ -2,6 +2,10 @@
 
 This is a demo for Angular Elements for a talk I gave at Devfest Rift Valley 2019.  The talk title was **Rich Web Components Using Angular Elements**.
 
+## Demo
+
+You can play with the demo for this well, demo, [here](https://mainawycliffe.github.io/gdg-devfest19-demo/).
+
 ## Building this Demo
 
 ```shell
