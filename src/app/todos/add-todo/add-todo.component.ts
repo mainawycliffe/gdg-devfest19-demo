@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { TodosService } from 'src/app/services/todos.service';
 import { FormControl, Validators } from '@angular/forms';
 
@@ -11,6 +11,9 @@ export class AddTodoComponent implements OnInit {
   @Output()
   onerror: EventEmitter<string> = new EventEmitter();
 
+  @Input()
+  placeholder = 'Buy Bread, Buy Milk ...';
+
   todoControl = new FormControl(null, Validators.required);
 
   constructor(private todosService: TodosService) {}
@@ -22,8 +25,6 @@ export class AddTodoComponent implements OnInit {
       this.onerror.emit('Todo is required!');
       return;
     }
-
-    this.onerror.emit('');
 
     this.todosService.addTodo({ todo: this.todoControl.value, isDone: false });
   }

@@ -15,7 +15,7 @@
     </ng-container>
     <div class="columns">
       <div class="column is-half is-offset-3">
-        <app-add-todo (onerror)="onError($event)"></app-add-todo>
+        <app-add-todo [placeholder]="'Buy Bread, ...'" (onerror)="onError($event)"></app-add-todo>
       </div>
     </div>
     <div class="columns">
