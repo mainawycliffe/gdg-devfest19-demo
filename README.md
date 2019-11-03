@@ -37,7 +37,7 @@ First, Import the the three build artifacts into you HTML File.
   Inside Header, Import the CSS:
 
   ```html
-  <head>>
+  <head>
     <link rel="stylesheet" href="./styles.css">
   </head>
   ```
@@ -69,6 +69,7 @@ And then, you can use the Web Components:
 
   const el = document.querySelector('add-todo');
   el.addEventListener('onerror', (event) => {
+    // do something when there is an error
     alert(event.detail);
   });
 
