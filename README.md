@@ -1,27 +1,60 @@
-# TodoAngularElementsExample
+# Todo Angular Elements (Web Components) Demo for GDG Devfest Rift Valley 2019
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
+This is a demo for Angular Elements for a talk I gave at Devfest Rift Valley 2019.  The talk title was **Rich Web Components Using Angular Elements**.
 
-## Development server
+## Building this Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```shell
 
-## Code scaffolding
+ng build --prod
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
 
-## Build
+You can skip the `--output-hashing` flag as I have set it permanently to none inside `angular.json`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+After building is complete, you can use Node to run the `concat.js` script which combines the build artifacts into a single JS Script essay to use with your index.html.
 
-## Running unit tests
+```shell
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+node concat.js
 
-## Running end-to-end tests
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+> I will share more scripts for achieving the same, from different scripting languages such as bash.
 
-## Further help
+If you use the `concat.js` to concat the files, the three final artifacts will be put inside the `output` dir at root of this project.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Using the Web Components
+
+You can then use the web components as follows inside any HTML.
+
+First, Import the the three build artifacts into you HTML File.
+
+  Inside Header, Import the CSS:
+
+  ```html
+  <head>>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  ```
+
+  And then, inside the body, just next to the body closing tags import the JS:
+
+  ```html
+  <script src="./ng-es5.js" nomodule></script> <!-- ES5 Import -->
+  <script src="./ng-es2015.js" type="module"></script> <!-- ES2015 Import (Smaller Bundle) -->
+  ```
+
+And then, you can use the Web Components:
+
+  To add todos:
+
+  ```html
+     <add-todo placeholder="Buy Bread, ..."></add-todo>
+  ```
+
+  To List Todos:
+
+  ```html
+  <list-todos></list-todos>
+  ```
