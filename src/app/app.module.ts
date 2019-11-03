@@ -1,11 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { createCustomElement } from '@angular/elements';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { ListTodosComponent } from './todos/list-todos/list-todos.component';
 import { AddTodoComponent } from './todos/add-todo/add-todo.component';
+import { ListTodosComponent } from './todos/list-todos/list-todos.component';
 
 @NgModule({
   declarations: [AppComponent, ListTodosComponent, AddTodoComponent],
