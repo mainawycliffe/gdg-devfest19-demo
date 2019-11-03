@@ -54,7 +54,7 @@ And then, you can use the Web Components:
   To add todos:
 
   ```html
-     <add-todo placeholder="Buy Bread, ..."></add-todo>
+  <add-todo placeholder="Buy Bread, ..."></add-todo>
   ```
 
   To List Todos:
